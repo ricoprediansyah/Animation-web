@@ -1,0 +1,27 @@
+body{
+  text-align: center;
+}
+
+
+a{
+  position: relative;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 4px;
+  width: 0;
+  background: #CE4815;
+  transition: width .3s ease;
+}
+
+a:hover:before {
+  width: 100%;
+}
