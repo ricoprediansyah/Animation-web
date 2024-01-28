@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatibel" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working Contact Form to email HTML CSS & Javascript</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstaps CSS -->   
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- bootstaps icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="index.js"></script>
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("PYJKOjbigZGuLvqyf");
+    })();
+  </script>
+</head>
+
+<body>
+  <section class="contact">
+    <div class="col-md-6">
+      <form action="#">
+        <div class="input-box">
+          <div class="row">
+            <div id="name" class="col-md-6">
+              <div class="mb-3">
+                <input type="name" 
+                class="form-control" 
+                id="nameX"
+                placeholder="Your Name" 
+                autocomplete="off">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                type="email" 
+                class="form-control" 
+                id="emailX"
+                placeholder="Your Email" 
+                autocomplete="off">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-3">
+                <input type="phone" 
+                class="form-control" 
+                id="phoneX"
+                placeholder="Your Phone" 
+                autocomplete="off">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <textarea 
+            style="height: 200px;" 
+            class="form-control" 
+            id="messageX"
+            rows="3" 
+            placeholder="Message">
+          </textarea>
+          </div>
+        </div>
+        <div class="text-center">
+          <button style="margin-bottom: 20px;" class="btn btn-primary" onclick="sendMail()" type="button">Send Message</button>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </section> 
+
+
+</body>
+</html>
